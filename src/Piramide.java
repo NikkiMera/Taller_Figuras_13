@@ -1,6 +1,7 @@
 import java.util.Scanner;
 
-class Piramide {
+class Piramide extends FiguraGeometrica {
+    @Override
     public void calcular(int opcionCalculo) {
         Scanner scanner = new Scanner(System.in);
 

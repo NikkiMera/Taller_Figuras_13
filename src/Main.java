@@ -22,9 +22,27 @@ public class Main {
 
         int opcionCalculo = scanner.nextInt();
 
-        FiguraGeometrica figura = new FiguraGeometrica(opcionFigura);
+        FiguraGeometrica figura = obtenerFigura(opcionFigura);
         figura.calcular(opcionCalculo);
 
         scanner.close();
+    }
+
+    public static FiguraGeometrica obtenerFigura(int opcionFigura) {
+        if (opcionFigura == 1) { // Triángulo
+            return new Triangulo();
+        } else if (opcionFigura == 2) { // Cuadrado
+            return new Cuadrado();
+        } else if (opcionFigura == 3) { // Círculo
+            return new Circulo();
+        } else if (opcionFigura == 4) { // Pirámide
+            return new Piramide();
+        } else if (opcionFigura == 5) { // Cubo
+            return new Cubo();
+        } else if (opcionFigura == 6) { // Esfera
+            return new Esfera();
+        } else {
+            return null;
+        }
     }
 }
